@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="cadastro-r.css" />
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+
+		<title>Cadastro</title>
+		<!--
+			Notes(gab): 
+				-[line 147] Botão não é type: submit, usar preventDefault para não carregar a página ao click
+				-Coloquei a nota pq não sei como faz isso mano
+		-->
+	</head>
+	<body class="d-flex justify-content-center align-items-center">
+		<div>
+			<div id="img"></div>
+			<div id="inputs" class="col py-2 mx-2 align-items-center">
+				<h3 class="font-weight-bold text-center my-5">
+					Cadastro Vorne
+				</h3>
+				<form id="form-0" method="POST">
+					<div class="row my-4">
+						<div class="col mx-1">
+							<label class="text-xl-left" for="Nome">Nome:</label>
+							<input
+								required
+								class="p-3"
+								type="text"
+								name="Nome"
+								id="Nome"
+							/>
+						</div>
+						<div class="col mx-1">
+							<label class="text-xl-left" for="Sobrenome"
+								>Sobrenome:</label
+							>
+							<input
+								required
+								class="p-3"
+								type="text"
+								name="Sobrenome"
+								id="Sobrenome"
+							/>
+						</div>
+					</div>
+
+					<div class="row mx-1 my-4">
+						<label class="text-xl-left" for="cli_data_nasc"
+							>Data de Nascimento:</label
+						>
+						<input
+							required
+							class="p-3"
+							type="text"
+							name="cli_data_nasc"
+							id="cli_data_nasc"
+						/>
+					</div>
+
+					<div class="row mx-1 my-4">
+						<label class="text-xl-left" for="Email">Email:</label>
+						<input
+							required
+							class="p-3"
+							type="text"
+							name="Email"
+							id="Email"
+						/>
+					</div>
+
+					<div class="row my-4">
+						<div class="col mx-1">
+							<label class="text-xl-left" for="CPF">CPF</label>
+							<input
+								required
+								class="p-3"
+								type="text"
+								name="CPF"
+								id="CPF"
+							/>
+						</div>
+						<div class="col mx-1">
+							<label class="text-xl-left" for="Senha"
+								>Senha:</label
+							>
+							<input
+								required
+								class="p-3"
+								type="text"
+								name="Senha"
+								id="Senha"
+							/>
+						</div>
+					</div>
+
+					<div class="row mx-1 my-4">
+						<label class="text-xl-left" for="Senha_confirm"
+							>Confirme a senha:</label
+						>
+						<input
+							required
+							class="p-3"
+							type="text"
+							name="Senha_confirm"
+							id="Senha_confirm"
+						/>
+					</div>
+
+					<div class="row my-4">
+						<div class="col mx-1">
+							<label class="text-xl-left" for="DDD">DDD:</label>
+							<input
+								required
+								class="p-3"
+								type="text"
+								name="DDD"
+								id="DDD"
+							/>
+						</div>
+						<div class="col mx-1">
+							<label class="text-xl-left" for="Celular"
+								>Celular:</label
+							>
+							<input
+								required
+								class="p-3"
+								type="text"
+								name="Celular"
+								id="Celular"
+							/>
+						</div>
+					</div>
+
+					<button
+						class="submit btn btn-dark"
+						type="button"
+						name="submit"
+						id="submit"
+						onclick="nextForm()"
+					>
+						Concluir cadastro
+					</button>
+				</form>
+
+				<form id="form-1" method="POST">
+					<div class="row my-4">
+						<div class="col mx-1">
+							<label class="text-xl-left" for="Estado"
+								>Estado:</label
+							>
+
+							<div class="form-select">
+								<select
+									name="Estad
+										 requiredo"
+									class="p-3"
+									id="Estado"
+								>
+									<option value="AC">AC</option>
+									<option value="AL">AL</option>
+									<option value="AP">AP</option>
+									<option value="AM">AM</option>
+									<option value="BA">BA</option>
+									<option value="ES">CE</option>
+									<option value="DF">DF</option>
+									<option value="GO">GO</option>
+									<option value="MA">MA</option>
+									<option value="MT">MT</option>
+									<option value="MS">MS</option>
+									<option value="MG">MG</option>
+									<option value="PA">PA</option>
+									<option value="PB">PB</option>
+									<option value="PR">PR</option>
+									<option value="PE">PE</option>
+									<option value="PI">PI</option>
+									<option value="RJ">RJ</option>
+									<option value="RN">RN</option>
+									<option value="RS">RS</option>
+									<option value="RO">RO</option>
+									<option value="RR">RR</option>
+									<option value="SC">SC</option>
+									<option value="SP">SP</option>
+									<option value="SE">SE</option>
+									<option value="TO">TO</option>
+								</select>
+								<span class="select-icon">
+									<i class="zmdi zmdi-chevron-down"></i>
+								</span>
+							</div>
+						</div>
+						<div class="col mx-1">
+							<label class="text-xl-left" for="CEP">CEP:</label>
+							<input
+								required
+								class="p-3"
+								type="text"
+								name="CEP"
+								id="CEP"
+							/>
+						</div>
+					</div>
+
+					<div class="row mx-1 my-4">
+						<label class="text-xl-left" for="Cidade">Cidade:</label>
+						<input
+							required
+							class="p-3"
+							type="text"
+							name="Cidade"
+							id="Cidade"
+						/>
+					</div>
+
+					<div class="row mx-1 my-4">
+						<label class="text-xl-left" for="Bairro">Bairro:</label>
+						<input
+							required
+							class="p-3"
+							type="text"
+							name="Bairro"
+							id="Bairro"
+						/>
+					</div>
+
+					<div class="row mx-1 my-4">
+						<label class="text-xl-left" for="Endereço"
+							>Endereço:</label
+						>
+						<input
+							required
+							class="p-3"
+							type="text"
+							name="Endereço"
+							id="Endereço"
+						/>
+					</div>
+
+					<div class="row my-4">
+						<div class="col mx-1" id="NúmeroCasa">
+							<label class="text-xl-left" for="NúmeroCasa"
+								>N° da casa:</label
+							>
+							<input
+								required
+								class="p-3"
+								type="text"
+								name="NúmeroCasa"
+								id="NúmeroCasa"
+							/>
+						</div>
+						<div class="col mx-1">
+							<label class="text-xl-left" for="Complemento"
+								>Complemento (opc.):</label
+							>
+							<input
+								required
+								class="p-3"
+								type="text"
+								name="Complemento"
+								id="Complemento"
+							/>
+						</div>
+					</div>
+					<button
+						class="submit btn btn-dark"
+						type="submit"
+						name="submit"
+						id="submit"
+					>
+						Concluir cadastro
+					</button>
+				</form>
+			</div>
+		</div>
+		<script>
+			document.getElementById("form-1").style.display = "none"
+			function nextForm() {
+				document.getElementById("form-0").style.display = "none"
+				document.getElementById("form-1").style.display = "block"
+			}
+		</script>
+	</body>
+</html>

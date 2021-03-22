@@ -1,0 +1,86 @@
+body {
+	margin: 0;
+}
+
+#header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 0 2.5rem;
+	background-image: radial-gradient(
+			circle at 99% 33%,
+			hsla(235, 0%, 48%, 0.03) 0%,
+			hsla(235, 0%, 48%, 0.03) 37%,
+			transparent 37%,
+			transparent 100%
+		),
+		radial-gradient(
+			circle at 46% 16%,
+			hsla(235, 0%, 48%, 0.03) 0%,
+			hsla(235, 0%, 48%, 0.03) 43%,
+			transparent 43%,
+			transparent 100%
+		),
+		radial-gradient(
+			circle at 99% 25%,
+			hsla(235, 0%, 48%, 0.03) 0%,
+			hsla(235, 0%, 48%, 0.03) 22%,
+			transparent 22%,
+			transparent 100%
+		),
+		radial-gradient(
+			circle at 57% 88%,
+			hsla(235, 0%, 48%, 0.03) 0%,
+			hsla(235, 0%, 48%, 0.03) 86%,
+			transparent 86%,
+			transparent 100%
+		),
+		radial-gradient(
+			circle at 82% 78%,
+			hsla(235, 0%, 48%, 0.03) 0%,
+			hsla(235, 0%, 48%, 0.03) 22%,
+			transparent 22%,
+			transparent 100%
+		),
+		linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0));
+}
+
+.timlogo {
+	width: 9rem;
+	height: 9rem;
+}
+
+#icons a {
+	margin: 0 0.75rem;
+	color: rgb(175, 175, 175);
+	text-shadow: 1.5px 1.5px 15px rgb(121, 121, 121);
+	font-size: 30px;
+	transition: 0.5s;
+}
+
+#icons a:hover {
+	color: rgb(255, 255, 255);
+	text-shadow: 3px 3px 10px rgb(153, 153, 153);
+}
+
+#minTitle {
+	display: none;
+	color: white;
+}
+
+@media (max-width: 450px) {
+	.timlogo {
+		display: none;
+	}
+
+	#icons a {
+		padding: 0 0 1rem;
+		font-size: 25px;
+	}
+
+	#minTitle {
+		display: block;
+	}
+}
