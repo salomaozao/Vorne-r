@@ -1,0 +1,244 @@
+:root {
+  --gradient: rgba(65, 65, 65, 0.75);
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI" !important;
+}
+
+.row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: auto;
+}
+
+#cuponsAndKits {
+  min-height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: auto;
+}
+
+#cuponsAndKits button {
+  background-color: rgba(90, 90, 90, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: 0;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  margin: 0.15rem 0.15rem;
+}
+
+#cuponsAndKits button#cup_productAdd {
+  margin: 0.5rem 0.15rem;
+}
+
+#cuponsAndKits img {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+#cuponsAndKits a {
+  text-decoration: none;
+  border-radius: 50%;
+  border: 1px solid black;
+  color: black;
+  font-weight: 700;
+  text-shadow: 0 0 1px black;
+  -webkit-box-shadow: 0.25px 0.25px 1.5px black;
+          box-shadow: 0.25px 0.25px 1.5px black;
+}
+
+#cuponsAndKits * {
+  outline: 0;
+}
+
+#cuponsAndKits div#cover {
+  color: #161616;
+}
+
+#cuponsAndKits div#cover div#toggle-area > div {
+  width: 100vw;
+  min-height: 5rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: none;
+}
+
+#cuponsAndKits div#cover div#toggle-area > div input[type="text"],
+#cuponsAndKits div#cover div#toggle-area > div input[type="number"],
+#cuponsAndKits div#cover div#toggle-area > div select {
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+  padding: 0.25rem 0;
+  margin: unset 0;
+  border: 0;
+  background-color: rgba(90, 90, 90, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: 0;
+  -webkit-appearance: none;
+}
+
+#cuponsAndKits div#cover div#toggle-area > div input[type="text"]::-webkit-inner-spin-button,
+#cuponsAndKits div#cover div#toggle-area > div input[type="text"] ::-webkit-outer-spin-button,
+#cuponsAndKits div#cover div#toggle-area > div input[type="number"]::-webkit-inner-spin-button,
+#cuponsAndKits div#cover div#toggle-area > div input[type="number"] ::-webkit-outer-spin-button,
+#cuponsAndKits div#cover div#toggle-area > div select::-webkit-inner-spin-button,
+#cuponsAndKits div#cover div#toggle-area > div select ::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#cuponsAndKits div#cover div#toggle-area > div .submitBttn {
+  background-color: rgba(71, 126, 71, 0.3);
+}
+
+#cuponsAndKits div#cover div#toggle-area > div#cuponsArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+}
+
+#cuponsAndKits div#cover div#toggle-area > div#cuponsArea > .row {
+  height: 6.4rem;
+  margin: 0.5rem 0;
+}
+
+#cuponsAndKits div#cover div#toggle-area > div#cuponsArea > .row div#inputArea .bgWhite {
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+#cuponsAndKits div#cover div#toggle-area > div#cuponsArea > .row div#inputArea label {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+#cuponsAndKits div#cover div#toggle-area > div#cuponsArea > .row div#checkArea {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 1rem;
+}
+
+#cuponsAndKits div#cover div#toggle-area > div#cuponsArea > .row div#checkArea > div {
+  margin-bottom: 0.3rem;
+}
+
+#cuponsAndKits div#cover div#toggle-area > div#cuponsArea div#prod_select {
+  margin: 0.5rem 0;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+#cuponsAndKits div#cover div#toggle-area > div#cuponsArea div#prod_select[hidden="false"] {
+  visibility: visible;
+  height: 1.5rem;
+}
+
+#cuponsAndKits div#cover div#toggle-area > div#cuponsArea div#prod_select[hidden="true"] {
+  visibility: hidden;
+  height: 0;
+}
+
+#cuponsAndKits div#cover div#toggle-area > div#cuponsArea div.products_show {
+  height: 30vh;
+}
+
+#cuponsAndKits div#cover div#toggle-area > div#kitsArea > div.row {
+  height: 15vh !important;
+  width: 20rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#cuponsAndKits div#cover div#toggle-area > div#kitsArea > div.row > div {
+  width: 100%;
+}
+
+#cuponsAndKits div#cover div#toggle-area > div#kitsArea > div.row > div#idSubmit {
+  position: relative;
+  top: 0.5rem;
+  margin: 0 1rem;
+}
+
+#cuponsAndKits div#cover div#toggle-area > div#kitsArea div.products_show {
+  height: 15vh;
+  margin: 1rem 0;
+}
+
+#cuponsAndKits div#cover div#toggle-area > div div.products_show {
+  width: 17rem;
+  padding: 0 1.5rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  white-space: nowrap;
+  background-color: rgba(70, 70, 70, 0.3);
+}
+
+#cuponsAndKits div#cover div#toggle-area > div div.products_show .product {
+  width: 15rem;
+  padding: 0 0.5rem;
+  margin: 0;
+  background-color: rgba(37, 37, 37, 0.6);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#cuponsAndKits div#cover div#toggle-area > div div.products_show .product > img {
+  border-radius: 2.5px;
+  background-size: contain;
+}
+
+#cuponsAndKits div#cover div#toggle-area > div div.products_show .product span {
+  margin: 0 0.5rem;
+}
+
+#cuponsAndKits div#cover div#toggle-area > div div.products_show .product > a {
+  font-size: 1rem;
+}
+
+#cuponsAndKits div#cover div#toggle-area > div button[type="submit"] {
+  margin: 1rem 0;
+}

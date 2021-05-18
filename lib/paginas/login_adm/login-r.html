@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Login</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="./login-r.css" />
+
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+
+		<link href="./Raleway-Black.ttf" rel="text/font" />
+
+		<script>
+			const togglePw = (el) => {
+				const input = document.getElementById("password")
+				if (el.innerHTML == "visibility") {
+					el.innerHTML = "visibility_off"
+					input.type = "text"
+				} else {
+					el.innerHTML = "visibility"
+					input.type = "password"
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="login">
+			<div>
+				<div>
+					<form>
+						<div>
+							<h1>Administração</h1>
+							<div class="inputs">
+								<input
+									type="email"
+									id="email"
+									placeholder="E-mail"
+									required
+								/>
+								<div>
+									<input
+										type="password"
+										id="password"
+										placeholder="senha"
+										required
+									/>
+									<span
+										class="material-icons"
+										onclick="togglePw(this)"
+									>
+										visibility
+									</span>
+								</div>
+							</div>
+							<div id="remember_area">
+								<input type="checkbox" id="remember_me" />
+								<label for="remember_me">lembre de mim</label>
+							</div>
+						</div>
+						<button type="submit" id="login_bttn">Login</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

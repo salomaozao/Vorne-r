@@ -1,0 +1,68 @@
+body {
+	margin: 0;
+	font-family: "Segoe UI";
+}
+
+#header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 0 2.5rem;
+	background: #000;
+	min-height: 30vh;
+}
+
+.timlogo {
+	width: 9rem;
+	height: 9rem;
+	transition: filter 0.5s;
+}
+
+.timlogo:hover {
+	filter: drop-shadow(30px 15px 3.5px rgb(53, 53, 53));
+}
+
+#icons a {
+	margin: 0 0.75rem;
+	color: rgb(175, 175, 175);
+	font-size: 30px;
+	transition: 0.5s;
+}
+
+#icons a:hover {
+	color: rgb(255, 255, 255);
+	text-shadow: 2px 2px 6px rgb(44, 44, 44);
+}
+
+#minTitle {
+	display: none;
+	color: white;
+}
+
+@media (max-width: 450px) {
+	#header {
+		justify-content: center;
+	}
+
+	.timlogo {
+		display: none;
+	}
+
+	#icons a {
+		padding: 0 0 1rem;
+		font-size: 25px;
+		border: 1px solid;
+		border-radius: 100%;
+		width: 2rem;
+		height: 0.75rem;
+		padding-top: 0.25rem;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	#minTitle {
+		display: block;
+	}
+}

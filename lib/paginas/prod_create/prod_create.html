@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Criação de produtos</title>
+		<link rel="stylesheet" href="./prod_create.css" />
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div id="prod_create">
+			<h1 class="title">Criação de produtos</h1>
+			<form>
+				<div class="form-row">
+					<div class="form-col">
+						<div class="form-group">
+							<label for="name">Nome</label>
+							<input type="text" id="name" />
+						</div>
+						<div class="form-group">
+							<label for="category">Categoria</label>
+							<input type="text" id="category" />
+						</div>
+						<div class="form-group">
+							<label for="ref">Referência</label>
+							<input type="text" id="ref" />
+						</div>
+					</div>
+					<div class="form-col">
+						<div class="form-group">
+							<label for="price">Preço</label>
+							<input type="text" id="price" />
+						</div>
+						<div class="form-group">
+							<label for="model">Model</label>
+							<input type="text" id="model" />
+						</div>
+						<div class="form-group">
+							<label for="img">Imagem</label>
+							<input type="image" id="img" />
+						</div>
+					</div>
+					<div class="form-col">
+						<div class="form-group">
+							<label for="description">Descrição</label>
+							<textarea
+								class="input-lg"
+								id="description"
+							></textarea>
+						</div>
+						<div class="form-group">
+							<span>Tamanhos</span>
+							<div class="radio-group">
+								<div>
+									<label for="size-mm">MM</label>
+									<input type="checkbox" id="size-mm" />
+								</div>
+								<div>
+									<label for="sizes-xp">XP</label
+									><input type="checkbox" id="sizes-xp" />
+								</div>
+								<div>
+									<label for="sizes-pp">PP</label
+									><input type="checkbox" id="sizes-pp" />
+								</div>
+								<div>
+									<label for="sizes-p">P</label
+									><input type="checkbox" id="sizes-p" />
+								</div>
+								<div>
+									<label for="sizes-m">M</label
+									><input type="checkbox" id="sizes-m" />
+								</div>
+								<div>
+									<label for="sizes-g">G</label
+									><input type="checkbox" id="sizes-g" />
+								</div>
+								<div>
+									<label for="sizes-g">GG</label
+									><input type="checkbox" id="sizes-g" />
+								</div>
+								<div>
+									<label for="sizes-xg">XG</label
+									><input type="checkbox" id="sizes-xg" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="prod-view">
+					<span>Visualização do produto</span>
+					<div></div>
+				</div>
+				<button class="submit">Criar produto</button>
+			</form>
+		</div>
+	</body>
+</html>

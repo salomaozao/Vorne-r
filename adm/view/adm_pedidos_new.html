@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body>
+		<div class="container text-center mx-auto w-75">
+			<h1>Pedidos Feitos</h1>
+			<div class="border rounded text-left">
+				<div
+					class="
+						bg-secondary
+						border-bottom
+						rounded-top
+						border-secondary
+						py-3
+						m-0
+						row
+						d-flex
+						justify-content-between
+					"
+					action=""
+				>
+					<form class="col-6">
+						<h5 class="text">Buscar Pedidos</h5>
+						<div class="row m-0 w-50">
+							<input
+								type="text"
+								class="
+									border
+									rounded
+									border-dark
+									bg-dark
+									p-1
+									col-8
+									rounded-0
+								"
+								placeholder="n° do pedido"
+							/>
+							<button class="btn btn-dark col-4 rounded-0">
+								Buscar
+							</button>
+						</div>
+					</form>
+
+					<form class="col-6">
+						<h5>Filtrar</h5>
+						<select
+							class="
+								border
+								rounded
+								border-dark
+								bg-dark
+								p-1
+								py-2
+								w-50
+								rounded-0
+							"
+						>
+							<option>Nenhum</option>
+						</select>
+					</form>
+				</div>
+				<table class="table w-100">
+					<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th>Nome</th>
+							<th>Valor do pedido</th>
+							<th>Status de pagamento</th>
+							<th>Data</th>
+							<th>Horário</th>
+							<th></th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						{foreach from=$PEDIDOS item=P}
+						<tr>
+							<th>1</th>
+							<td>{$P.cli_nome} {$P.cli_sobrenome}</td>
+							<td>{$P.ped_ref}</td>
+							<td>R$ {$P.ped_valor}</td>
+							<td>{$P.ped_pag_status}</td>
+							<td>{$P.ped_data}</td>
+							<td>{$P.ped_hora}</td>
+							<td>
+								<form
+									name="itens"
+									method="post"
+									action="{$PAG_ITENS}"
+								>
+									<input
+										type="hidden"
+										name="cod_pedido"
+										id="cod_pedido"
+										value="{$P.ped_cod}"
+									/>
+									<button class="btn btn-info">
+										<i
+											class="
+												glyphicon
+												glyphicon-menu-hamburger
+											"
+										></i>
+										Detalhes
+									</button>
+								</form>
+							</td>
+							<td>
+								<form name="deletar" method="post" action="">
+									<input
+										type="hidden"
+										name="cod_pedido"
+										id="cod_pedido"
+										value="{$P.ped_cod}"
+									/>
+									<button
+										class="btn btn-danger"
+										name="ped_apagar"
+										value="ped_apagar"
+									>
+										Apagar
+									</button>
+								</form>
+							</td>
+						</tr>
+						{/foreach}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

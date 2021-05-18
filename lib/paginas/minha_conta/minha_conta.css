@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+}
+
+#minha_conta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 70vh;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#minha_conta button {
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  width: 10rem;
+  background: #52e052;
+  margin: 0.5rem 0.25rem;
+  border: 0;
+  padding: 0.25rem 0.5rem;
+}
+
+#minha_conta button.alert {
+  background-color: #e0e052;
+}
+
+#minha_conta button.danger {
+  background-color: #e05252;
+}
+
+#minha_conta button span.content {
+  position: relative;
+  top: 0.25rem;
+  left: 0.15rem;
+}

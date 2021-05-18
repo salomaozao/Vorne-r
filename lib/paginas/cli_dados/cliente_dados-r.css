@@ -1,0 +1,205 @@
+body {
+  font-family: "Segoe UI" !important;
+  margin: 0;
+}
+
+div,
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+div#cliente-dados {
+  -webkit-box-pack: start !important;
+      -ms-flex-pack: start !important;
+          justify-content: flex-start !important;
+  background-image: linear-gradient(326deg, rgba(236, 236, 236, 0.04) 0%, rgba(236, 236, 236, 0.04) 6%, rgba(157, 157, 157, 0.04) 6%, rgba(157, 157, 157, 0.04) 29%, rgba(77, 77, 77, 0.04) 29%, rgba(77, 77, 77, 0.04) 100%), linear-gradient(164deg, rgba(236, 236, 236, 0.04) 0%, rgba(236, 236, 236, 0.04) 36%, rgba(157, 157, 157, 0.04) 36%, rgba(157, 157, 157, 0.04) 61%, rgba(77, 77, 77, 0.04) 61%, rgba(77, 77, 77, 0.04) 100%), linear-gradient(336deg, rgba(236, 236, 236, 0.04) 0%, rgba(236, 236, 236, 0.04) 64%, rgba(157, 157, 157, 0.04) 64%, rgba(157, 157, 157, 0.04) 69%, rgba(77, 77, 77, 0.04) 69%, rgba(77, 77, 77, 0.04) 100%), linear-gradient(90deg, black, black);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 80vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div#cliente-dados h1 {
+  color: #b4b4b4;
+}
+
+div#cliente-dados button[type="submit"] {
+  padding: 0.65rem 0.15rem;
+}
+
+div#cliente-dados h1,
+div#cliente-dados h3 {
+  margin: 1.5rem;
+  text-align: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div#cliente-dados form#input-row {
+  width: 90vw;
+  height: 50%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+div#cliente-dados form#input-row div.confirm {
+  display: none;
+}
+
+div#cliente-dados form#input-row div.input-column {
+  background-size: 11px 11px;
+  border-radius: 4px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(73, 73, 73, 0.26);
+}
+
+@media screen and (max-width: 1000px) {
+  div#cliente-dados form#input-row div.input-column {
+    width: 95%;
+    height: 95%;
+    padding: 1rem 0;
+    display: none;
+  }
+  div#cliente-dados form#input-row div.input-column:first-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  div#cliente-dados form#input-row div.input-column {
+    height: 100%;
+    width: 25%;
+    margin: 0 0.5rem;
+    padding: 2.5rem 0;
+  }
+}
+
+div#cliente-dados form#input-row div.input-column > div.input-area {
+  width: 90%;
+  display: flexbox;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.5rem 0;
+}
+
+div#cliente-dados form#input-row div.input-column > div.input-area input {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  background: transparent;
+  outline: 0;
+  border: 0;
+  background-color: rgba(75, 75, 75, 0.5);
+  padding: 0.25rem 0;
+}
+
+div#cliente-dados form#input-row div.input-column > div.input-area label {
+  -ms-flex-item-align: left;
+      -ms-grid-row-align: left;
+      align-self: left;
+  margin-left: 1.5rem;
+}
+
+div#cliente-dados form#input-row div.controls {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: none;
+  margin: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+  div#cliente-dados form#input-row div.controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+div#cliente-dados form#input-row div.controls > button {
+  background: #646464;
+  border-radius: 50%;
+  border: 0;
+  padding: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #141414;
+}
+
+div#cliente-dados form#input-row div.controls > button[disabled="true"] {
+  display: none;
+}
+
+div#cliente-dados form#input-row div.controls > .ctrl-page {
+  padding: 0 0.5rem;
+  color: #3c3c3c;
+}
+
+button {
+  display: block !important;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: whitesmoke;
+  background: rgba(73, 73, 73, 0.233);
+  border: 1px solid #0e0e0e;
+  border-radius: 2.5px;
+  width: 85%;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+button span {
+  color: black;
+}
+
+button.confirm {
+  margin: 1.5rem;
+  width: 30%;
+  padding: 1rem;
+}
+
+div.confirm {
+  margin: 0 auto !important;
+}

@@ -1,0 +1,184 @@
+@import "../../../view/css/main.css";
+@import "../../../view/css/util.css";
+
+body {
+	margin: 0;
+}
+
+.cadastro {
+	-ms-flex-item-align: center;
+	-ms-grid-row-align: center;
+	flex-direction: column;
+	align-self: center;
+	padding-bottom: 5em;
+}
+
+.cadastro h1 {
+	margin-top: 0;
+}
+
+.cadastro input,
+.cadastro select {
+	text-align: center;
+}
+
+.cadastro div,
+.cadastro form {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: space-evenly;
+	-ms-flex-pack: space-evenly;
+	justify-content: space-evenly;
+}
+
+.cadastro .col {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.cadastro .col input,
+.cadastro .col select {
+	width: 50%;
+}
+
+@media screen and (min-width: 1000px) {
+	.cadastro .row {
+		width: 20vw;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+	.cadastro .row label {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-item-align: center;
+		align-self: center;
+	}
+	.cadastro .row input,
+	.cadastro .row select {
+		width: 12vw;
+		margin: 0 1rem;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.cadastro .row {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+	.formDiv *:not(label, button, select) {
+		display: flex;
+		width: 100%;
+	}
+
+	.formDiv select {
+		width: 50%;
+	}
+}
+
+.cadastro#inputs {
+	min-height: 80vh;
+	background-color: whitesmoke;
+	text-align: center;
+}
+
+.cadastro#inputs h1#title {
+	width: 15rem;
+	padding: 0.35em 0 0.5em;
+	margin: 0 auto;
+}
+
+.cadastro#inputs div.formDiv {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	background-color: rgba(0, 0, 0, 0.3);
+	padding: 1rem;
+	border-radius: 0.5em;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (min-width: 1000px) {
+	.cadastro#inputs div.formDiv {
+		min-width: 50%;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.cadastro#inputs div.formDiv {
+		min-width: 80%;
+	}
+}
+
+.cadastro#inputs div.formDiv > div {
+	width: 100%;
+}
+
+.cadastro#inputs div.formDiv > div input,
+.cadastro#inputs div.formDiv > div select {
+	background: rgba(220, 220, 220, 0.8);
+	border: 0;
+	outline: 0;
+	border-radius: 2.5px;
+	padding: 0.25rem 0.75rem;
+	-webkit-transition: -webkit-box-shadow 0.25s;
+	transition: -webkit-box-shadow 0.25s;
+	transition: box-shadow 0.25s;
+	transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
+	-webkit-transition: padding 0.5s;
+	transition: padding 0.5s;
+
+	display: flex;
+}
+
+.cadastro#inputs div.formDiv button.submit_btn {
+	margin: 1.25rem 1.5rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-item-align: end;
+	align-self: flex-end;
+	background-color: #545454;
+	color: white;
+	border: 0;
+	border-radius: 3px;
+	padding: 0.5rem 0.75rem;
+	-webkit-transition: -webkit-box-shadow 0.25s;
+	transition: -webkit-box-shadow 0.25s;
+	transition: box-shadow 0.25s;
+	transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
+
+	letter-spacing: 0.1em;
+	font-size: 0.9em;
+}
+
+.cadastro#inputs div.formDiv button.submit_btn:hover {
+	-webkit-box-shadow: 1.5px 1.5px 15px rgba(40, 40, 40, 0.9);
+	box-shadow: 1.5px 1.5px 15px rgba(40, 40, 40, 0.9);
+}
+
+.cadastro#inputs div.formDiv button.submit_btn[disabled] {
+	background-color: #4b4b4b;
+	color: #292929;
+	border: 0;
+	margin: unset 0;
+}
+
+.cadastro label {
+	margin-top: 0.5em;
+	font-size: 1.2em;
+}

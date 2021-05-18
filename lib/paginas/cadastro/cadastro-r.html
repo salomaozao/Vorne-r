@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="./cadastro_r.css" />
+		<title>Cadastro</title>
+		<!--
+			Notes(gab): 
+				-[line 147] Botão não é type: submit, usar preventDefault para não carregar a página ao click
+		-->
+	</head>
+	<body>
+		<div id="inputs" class="col cadastro">
+			<h1 id="title">Cadastro Vorne</h1>
+			<form>
+				<div class="formDiv" id="form-0" method="POST" class="col">
+					<div class="row">
+						<div class="col">
+							<label for="Nome">Nome:</label>
+							<input required type="text" name="Nome" id="Nome" />
+						</div>
+						<div class="col">
+							<label for="Sobrenome">Sobrenome:</label>
+							<input
+								required
+								type="text"
+								name="Sobrenome"
+								id="Sobrenome"
+							/>
+						</div>
+					</div>
+
+					<div class="col">
+						<label for="cli_data_nasc">Data de Nascimento:</label>
+						<input
+							required
+							type="date"
+							name="cli_data_nasc"
+							id="cli_data_nasc"
+						/>
+					</div>
+
+					<div class="col">
+						<label for="Email">Email:</label>
+						<input required type="text" name="Email" id="Email" />
+					</div>
+
+					<div class="row">
+						<div class="col">
+							<label for="CPF">CPF</label>
+							<input required type="text" name="CPF" id="CPF" />
+						</div>
+						<div class="col">
+							<label for="Senha">Senha:</label>
+							<input
+								required
+								type="text"
+								name="Senha"
+								id="Senha"
+							/>
+						</div>
+					</div>
+
+					<div class="col">
+						<label for="Senha_confirm">Confirme a senha:</label>
+						<input
+							required
+							type="text"
+							name="Senha_confirm"
+							id="Senha_confirm"
+						/>
+					</div>
+
+					<div class="row">
+						<div class="col">
+							<label for="DDD">DDD:</label>
+							<input required type="text" name="DDD" id="DDD" />
+						</div>
+						<div class="col">
+							<label for="Celular">Celular:</label>
+							<input
+								required
+								type="text"
+								name="Celular"
+								id="Celular"
+							/>
+						</div>
+					</div>
+
+					<div class="btn_row">
+						<button
+							class="submit_btn"
+							type="button"
+							id="submit"
+							disabled
+						>
+							Página anterior
+						</button>
+
+						<button
+							class="submit_btn"
+							type="button"
+							id="submit"
+							onclick="nextForm()"
+						>
+							Próxima página
+						</button>
+					</div>
+				</div>
+
+				<div class="formDiv" id="form-1" method="POST" class="col">
+					<div class="row">
+						<div class="col">
+							<label for="Estado">Estado:</label>
+
+							<div class="form-select">
+								<select name="Estado" required id="Estado">
+									<option value="AC">AC</option>
+									<option value="AL">AL</option>
+									<option value="AP">AP</option>
+									<option value="AM">AM</option>
+									<option value="BA">BA</option>
+									<option value="ES">CE</option>
+									<option value="DF">DF</option>
+									<option value="GO">GO</option>
+									<option value="MA">MA</option>
+									<option value="MT">MT</option>
+									<option value="MS">MS</option>
+									<option value="MG">MG</option>
+									<option value="PA">PA</option>
+									<option value="PB">PB</option>
+									<option value="PR">PR</option>
+									<option value="PE">PE</option>
+									<option value="PI">PI</option>
+									<option value="RJ">RJ</option>
+									<option value="RN">RN</option>
+									<option value="RS">RS</option>
+									<option value="RO">RO</option>
+									<option value="RR">RR</option>
+									<option value="SC">SC</option>
+									<option value="SP">SP</option>
+									<option value="SE">SE</option>
+									<option value="TO">TO</option>
+								</select>
+								<span class="select-icon">
+									<i class="zmdi zmdi-chevron-down"></i>
+								</span>
+							</div>
+						</div>
+						<div class="col">
+							<label for="CEP">CEP:</label>
+							<input required type="text" name="CEP" id="CEP" />
+						</div>
+					</div>
+
+					<div class="col">
+						<label for="Cidade">Cidade:</label>
+						<input required type="text" name="Cidade" id="Cidade" />
+					</div>
+
+					<div class="col">
+						<label for="Bairro">Bairro:</label>
+						<input required type="text" name="Bairro" id="Bairro" />
+					</div>
+
+					<div class="col">
+						<label for="Endereço">Endereço:</label>
+						<input
+							required
+							type="text"
+							name="Endereço"
+							id="Endereço"
+						/>
+					</div>
+
+					<div class="row">
+						<div class="col" id="NúmeroCasa">
+							<label for="NúmeroCasa">N° da casa:</label>
+							<input
+								required
+								type="text"
+								name="NúmeroCasa"
+								id="NúmeroCasa"
+							/>
+						</div>
+						<div class="col">
+							<label for="Complemento">Complemento (opc.):</label>
+							<input
+								required
+								type="text"
+								name="Complemento"
+								id="Complemento"
+							/>
+						</div>
+					</div>
+
+					<div class="btn_row">
+						<button
+							class="submit_btn"
+							type="button"
+							id="submit"
+							onclick="pastForm()"
+						>
+							Página anterior
+						</button>
+
+						<button class="submit_btn" type="submit" id="submit">
+							Terminar cadastro
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<script>
+			document.getElementById("form-1").style.display = "none"
+			function nextForm() {
+				document.getElementById("form-0").style.display = "none"
+				document.getElementById("form-1").style.display = "flex"
+			}
+
+			function pastForm() {
+				document.getElementById("form-0").style.display = "flex"
+				document.getElementById("form-1").style.display = "none"
+			}
+		</script>
+	</body>
+</html>

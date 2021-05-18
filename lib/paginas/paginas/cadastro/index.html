@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Sign Up Form by Colorlib</title>
+
+		<!-- Font Icon -->
+		<link
+			rel="stylesheet"
+			href="fonts/material-icon/css/material-design-iconic-font.min.css"
+		/>
+
+		<!-- Main css -->
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="main">
+			<div class="container">
+				<div class="signup-content">
+					<div class="signup-img">
+						<img style="height: 99%" src="./images.jfif" alt="" />
+					</div>
+					<div class="signup-form">
+						<form
+							method="POST"
+							class="register-form"
+							id="register-form"
+						>
+							<center><h2>Cadastro Vorne</h2></center>
+							<div class="form-row">
+								<div class="form-group">
+									<label for="Nome">Nome :</label>
+									<input
+										type="text"
+										name="Nome"
+										id="Nome"
+										required
+									/>
+								</div>
+								<div class="form-group">
+									<label for="Sobrenome">Sobrenome :</label>
+									<input
+										type="text"
+										name="Sobrenome"
+										id="Sobrenome"
+										required
+									/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="cli_data_nasc">Data Nasc :</label>
+								<input
+									type="date"
+									name="cli_data_nasc"
+									class="form-control"
+									required
+								/>
+							</div>
+							<div class="form-group">
+								<label for="Email">Email:</label>
+								<input
+									type="text"
+									name="Email"
+									id="Email"
+									required
+								/>
+							</div>
+							<div class="form-row">
+								<div class="form-group">
+									<label for="CPF">CPF :</label>
+									<input
+										type="text"
+										name="CPF"
+										id="CPF"
+										required
+									/>
+								</div>
+								<div class="form-group">
+									<label for="Senha">Senha :</label>
+									<input
+										type="text"
+										name="Número Casa"
+										id="NúmeroCasa"
+										required
+									/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="Senha">Confirme a Senha:</label>
+								<input
+									type="text"
+									name="Senha"
+									id="|Senha"
+									required
+								/>
+							</div>
+							<div class="form-row">
+								<div class="form-group">
+									<label for="Estado">Estado :</label>
+									<div class="form-select">
+										<select name="Estado" id="Estado">
+											<option value="AC">AC</option>
+											<option value="AL">AL</option>
+											<option value="AP">AP</option>
+											<option value="AM">AM</option>
+											<option value="BA">BA</option>
+											<option value="ES">CE</option>
+											<option value="DF">DF</option>
+											<option value="GO">GO</option>
+											<option value="MA">MA</option>
+											<option value="MT">MT</option>
+											<option value="MS">MS</option>
+											<option value="MG">MG</option>
+											<option value="PA">PA</option>
+											<option value="PB">PB</option>
+											<option value="PR">PR</option>
+											<option value="PE">PE</option>
+											<option value="PI">PI</option>
+											<option value="RJ">RJ</option>
+											<option value="RN">RN</option>
+											<option value="RS">RS</option>
+											<option value="RO">RO</option>
+											<option value="RR">RR</option>
+											<option value="SC">SC</option>
+											<option value="SP">SP</option>
+											<option value="SE">SE</option>
+											<option value="TO">TO</option>
+										</select>
+										<span class="select-icon"
+											><i
+												class="zmdi zmdi-chevron-down"
+											></i
+										></span>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="CEP">CEP :</label>
+									<input
+										type="text"
+										name="CEP"
+										id="CEP"
+										required
+									/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="Cidade">Cidade :</label>
+								<input
+									type="text"
+									name="Cidade"
+									id="Cidade"
+									required
+								/>
+							</div>
+							<div class="form-group">
+								<label for="Bairro">Bairro :</label>
+								<input
+									type="text"
+									name="Bairro"
+									id="Bairro"
+									required
+								/>
+							</div>
+							<div class="form-group">
+								<label for="Endereço">Endereço :</label>
+								<input
+									type="text"
+									name="Endereço"
+									id="Endereço"
+								/>
+							</div>
+							<div class="form-row">
+								<div class="form-group">
+									<label for="NúmeroCasa"
+										>Número Casa :</label
+									>
+									<input
+										type="text"
+										name="Número Casa"
+										id="NúmeroCasa"
+										required
+									/>
+								</div>
+								<div class="form-group">
+									<label for="Complemento">
+										Complemento(Opcional)
+									</label>
+									<input
+										type="text"
+										name="Complemento"
+										id="Complemento"
+									/>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group">
+									<label for="DDD">DDD :</label>
+									<input
+										type="text"
+										name="DDD"
+										id="DDD"
+										required
+									/>
+								</div>
+								<div class="form-group">
+									<label for="Celular">Celular :</label>
+									<input
+										type="Celular"
+										name="Celular"
+										id="Celular"
+									/>
+								</div>
+							</div>
+							<div class="form-submit">
+								<input
+									type="submit"
+									value="Cadastrar"
+									class="submit"
+									name="submit"
+									id="submit"
+								/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- JS -->
+		<script src="vendor/jquery/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

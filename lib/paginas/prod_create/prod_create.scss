@@ -1,0 +1,126 @@
+* {
+	font-size: 16px;
+	font-family: "Segoe UI";
+	body {
+		margin: 0;
+		div,
+		form {
+			display: flex;
+			flex-direction: column;
+		}
+
+		#prod_create {
+			$text-color: #707070;
+			$bg-color: #5a5a5a4d;
+
+			min-height: 130vh;
+
+			align-items: center;
+
+			color: $text-color;
+			font: normal normal normal 27px/1.5rem;
+			background: #000;
+			.title {
+				font: normal normal bold 4rem/3rem;
+				text-align: center;
+				font-size: 3rem;
+				margin: 0 0 4rem;
+				padding: 1rem 0;
+			}
+
+			form {
+				> div.form-row {
+					flex-direction: row;
+					flex-wrap: wrap;
+					> div.form-col {
+						flex: 1 1 content;
+						align-self: center;
+						& + div.form-col {
+							margin: 0 1.15rem;
+							@media screen and (max-width: 516px) {
+								margin-top: 1.25rem;
+							}
+						}
+
+						> div.form-group {
+							align-self: center;
+							margin: unset 1rem;
+
+							& + div.form-group {
+								margin-top: 1.25rem;
+							}
+
+							label,
+							span {
+								font-size: 1.5rem;
+								margin-bottom: 0.25rem;
+							}
+
+							input[type="text"],
+							input[type="image"] {
+								background: $bg-color;
+								border: 0;
+								width: 13.5rem;
+								height: 2rem;
+								padding: 0 0.75rem;
+								outline: 1px solid rgb(14, 14, 14);
+
+								&::placeholder {
+									font-size: 1rem;
+								}
+							}
+							textarea {
+								background: $bg-color;
+								border: 0;
+								height: calc(2rem * 2 + 1.25rem * 2 + 0.4rem);
+								outline: 1px solid rgb(14, 14, 14);
+								resize: none;
+							}
+
+							.radio-group {
+								flex-direction: row;
+								> div {
+									margin: 0 0.25rem;
+									height: 2rem;
+									width: 1rem;
+									align-items: center;
+									> * {
+										margin: 0;
+									}
+									label {
+										font-size: 0.75rem;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				div.prod-view {
+					width: 4rem;
+					align-items: center;
+					align-self: center;
+					margin: 2.75rem 0 1.5rem;
+
+					> span {
+						font-size: 1.8rem;
+						width: 30vw;
+						text-align: center;
+						margin: 0 0 0.75rem;
+					}
+					> div {
+						height: 16rem;
+						width: 12rem;
+						background: #fff;
+					}
+				}
+				button.submit {
+					background: #477e4749;
+					border: 1px solid #071807;
+					padding: 0.25rem 0;
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+}
