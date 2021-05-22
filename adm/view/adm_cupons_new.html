@@ -29,14 +29,14 @@
 	<body>
 		<div id="cuponsAndKits" class="container text-center pt-4">
 			<div>
-				<h2 class="title">Criação kits </h2>
+				<h2 class="title">Criação de códigos de desconto</h2>
 			</div>
 			<form action="" method="post">
-				<div class="">
-					<div id="inputsArea" class="row mx-auto w-50 p-0 container">
-						<div class="text-left my-2 mx-0 px-1 col-6">
+				<div class="row mx-auto w-50">
+					<div id="inputsArea" class="col-6 p-0 container">
+						<div class="text-left my-2 row">
 							<label class="col-12" for="prod_name"
-								>Nome do kit</label
+								>Nome do cupom</label
 							>
 							<input
 								required
@@ -46,21 +46,66 @@
 								id="prod_name"
 							/>
 						</div>
-						<div class="text-left my-2 mx-0 px-1 col-6">
-							<label class="col-12" for="prod_name"
-								>Preço</label
-							>
-							<input
-								required
-								class="col-12 bg-secondary border-0 px-2 py-1"
-								type="number"
-								name="prod_name"
-								id="prod_name"
-							/>
+						<div class="text-left my-2 row">
+							<label class="col-12" for="prod_val">Valor</label>
+							<div class="col-12">
+								<div class="row p-0">
+									<input
+										required
+										class="
+											col-9
+											border-0
+											bg-secondary
+											py-1
+											pl-2
+										"
+										type="number"
+										id="prod_val"
+										name="prod_val"
+									/>
+									<select
+										class="col-3 border-0 bg-secondary py-1"
+										type="text"
+										id="cup_type"
+									>
+										<option>%</option>
+										<option>R$</option>
+									</select>
+								</div>
+							</div>
 						</div>
 					</div>
 
-					
+					<div
+						id="checkboxArea"
+						class="col-4 p-0 d-flex align-items-center"
+					>
+						<div class="flex-column">
+							<div class="d-flex justify-content-start">
+								<input
+									type="radio"
+									name="cup_type"
+									id="type_selected"
+									onclick="promoCode.prodSelect.show()"
+									checked
+								/>
+								<label class="ml-1 mt-1" for="cup_type"
+									>Selecionados</label
+								>
+							</div>
+							<div class="d-flex justify-content-start">
+								<input
+									type="radio"
+									name="cup_type"
+									id="type_all"
+									onclick="promoCode.prodSelect.hide()"
+								/>
+								<label class="ml-1 mt-1" for="cup_type"
+									>Todos</label
+								>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div id="prod-select">
 					<div id="prod_show" class="container">
@@ -118,10 +163,10 @@
 						class="btn btn-lg btn-success my-2 shadow"
 						type="submit"
 					>
-						Criar Kit!
+						Criar Cupom!
 					</button>
 					<div id="cup-managing" class="my-4">
-						<h4 class="text-left">Kits existentes</h4>
+						<h4 class="text-left">Cupons existentes</h4>
 						<table class="table">
 							<thead>
 								<tr>
@@ -135,8 +180,8 @@
 							<tbody>
 								<tr>
 									<th scope="row">1</th>
-									<td><a href="#" >kit de verão</a></td>
-									<td>R$99,99</td>
+									<td>MEUCUÉSEU</td>
+									<td>R$19,99</td>
 									<td><input type="checkbox" /></td>
 									<td>
 										<button class="btn btn-danger">
@@ -146,7 +191,7 @@
 								</tr>
 								<tr>
 									<th scope="row">2</th>
-									<td><a href="#" >{prod_name}</a></td>
+									<td>{prod_name}</td>
 									<td>R${prod_preço}</td>
 									<td>
 										<input
@@ -162,7 +207,7 @@
 								</tr>
 								<tr>
 									<th scope="row">3</th>
-									<td><a href="#" >Meias para natal</a></td>
+									<td>PROMO50</td>
 									<td>R$19,99</td>
 									<td><input type="checkbox" /></td>
 									<td>
